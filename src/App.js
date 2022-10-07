@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
 import './App.css';
@@ -78,7 +78,7 @@ function App() {
       <main className={`App__main App__main__${theme}`}>
         <div className="App__content__wrapper">
 
-          <BrowserRouter>
+          <HashRouter>
             <Routes>
               <Route path="/" element={(
                   <>
@@ -94,7 +94,7 @@ function App() {
               <Route path="/location=:id" element={<SingleCountryPage filtered={filtered} data={data} theme={theme} onBorderNavigationClick={handleBorderNavigationClick} />} />
               <Route path='*' element={<Error />} />
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </div>
       </main>
     </>

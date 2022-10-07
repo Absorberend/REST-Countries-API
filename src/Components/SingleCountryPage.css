@@ -1,0 +1,241 @@
+.single__page__back__button__wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 3em 0;
+    font-size: 16px;
+}
+
+.single__page__back__button {
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+    border-width: 0;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: 600;
+    line-height: inherit;
+    padding: 0;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.single__page__border__button__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.single__page__button {
+    height: 30px;
+    width: 100px;
+    background-color: transparent;
+    border-width: 0;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: 400;
+    line-height: inherit;
+    padding: 0;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.single__page__button__dark {
+    color: var(--dark-mode-text);
+    background-color: var(--dark-mode-EL);
+}
+
+.single__page__button__light {
+    color: var(--light-mode-text);
+    background-color: var(--light-mode-bg);
+}
+
+
+.single__page__arrow {
+    width: 25px;
+}
+
+.single__page__arrow__light {
+    filter: invert(0%) sepia(93%) saturate(3%) hue-rotate(255deg) brightness(100%) contrast(100%);
+}
+
+.single__page__arrow__dark {
+    filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(345deg) brightness(99%) contrast(105%);
+}
+
+.single__page__flag img {
+    width: 100%;
+}
+
+.single__page__container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 2em;
+}
+
+.single__page__info__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-weight: 600;
+    margin: 2em 0 0 0;
+}
+
+.single__page__info__container h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 0.5em 0;
+}
+
+.single__page__main__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    margin-block-end: 2em;
+}
+
+.single__page__secondary__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    margin-block-end: 2em;
+}
+
+.single__page__main__subtext {
+    margin-inline-start: 6px;
+    font-weight: 400;
+}
+
+.single__page__border__countries {
+    display: flex;
+    flex-direction: column;
+}
+
+.single__page__border__countries h4{
+    min-width: 140px;
+}
+
+@media only screen and (min-width: 600px) {
+    .single__page__container {
+        width: 100%;
+        height: 100%;
+        padding: 2em;
+    }
+
+    .single__page__back__button__wrapper {
+        font-size: 24px;
+    }
+    
+    .single__page__back__button {
+        height: 65px;
+        width: 210px;
+        font-size: 24px;
+    }
+    
+    .single__page__arrow {
+        width: 40px;
+    }
+
+    .single__page__button {
+        height: 30px;
+        width: 115px;
+        font-size: 16px;
+    }
+    
+    
+    .single__page__container {
+        font-size: 24px;
+        padding: 0em;
+    }
+    
+   
+    .single__page__info__container h2 {
+        font-size: 32px;
+    }
+    
+}
+
+@media only screen and (min-width: 900px) { 
+    .single__page__back__button__wrapper {
+        font-size: 16px;
+    }
+    
+    .single__page__back__button {
+        height: 50px;
+        width: 120px;
+        font-size: 16px;
+    }
+    
+    .single__page__arrow {
+        width: 25px;
+    }
+
+    .single__page__button {
+        height: 30px;
+        width: 100px;
+        font-size: 12px;
+    }
+    
+
+    .single__page__container {
+        display: grid;
+        grid-template-areas: 
+        "flag . header header"
+        "flag . maintext maintext"
+        "flag . borders borders";
+        grid-template-columns: 0.5fr 0.07fr 0.25fr 0.25fr;
+        grid-template-rows: 0.05fr 0.05fr 0.4fr;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .single__page__border__countries {
+        grid-area: borders;
+        max-width: 600px;
+    }
+
+    .single__page__flag {
+        grid-area: flag;
+    }
+
+    .single__page__flag img {
+        width: 100%;
+        max-height: 800px;
+    }
+
+    .single__page__country__header {
+        grid-area: header;
+        margin-block-start: 1em;
+        font-size: 24px;
+    }
+
+    .single__page__info__container {
+        grid-area: maintext;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        max-width: 600px;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .single__page__border__countries {
+        flex-direction: row;
+    }
+
+    .single__page__border__countries h4 {
+        margin: 0 0.5em 0 0;
+    }
+
+}

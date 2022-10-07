@@ -1,0 +1,88 @@
+@import "../App.css";
+
+.search__bar__wrapper {
+    position: relative;
+}
+
+.search__bar {
+    border: 0;
+    height: 60px;
+    width: 100%;
+    padding: 0 0 0 4.5em;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.search__bar__light {
+    background-color: var(--light-mode-EL);
+    color: var(--light-mode-input);
+}
+
+.search__bar__light::placeholder {
+    color: var(--light-mode-input);
+}
+
+.search__bar__dark {
+    background-color: var(--dark-mode-EL);
+    color: var(--dark-mode-text);
+}
+
+.search__bar__dark::placeholder {
+    color: var(--dark-mode-text);
+}
+
+
+.search__bar__icon {
+    position: absolute;
+    left: 25px;
+    top: 20px;
+    z-index: 1;
+    width: 20px;
+}
+
+.search__bar__icon__light {
+    filter: invert(54%) sepia(0%) saturate(24%) hue-rotate(147deg) brightness(98%) contrast(86%);
+}
+
+.search__bar__icon__dark {
+    filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(345deg) brightness(99%) contrast(105%);
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    .search__bar {
+        height: 100px;
+        padding: 0 0 0 6em;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+
+    .search__bar__icon {
+        left: 50px;
+        top: 30px;
+        width: 40px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .search__bar {
+        border: 0;
+        height: 60px;
+        width: 500px;
+        padding: 0 0 0 6em;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .search__bar__icon {
+        position: absolute;
+        left: 40px;
+        top: 20px;
+        z-index: 1;
+        width: 20px;
+    }
+
+}

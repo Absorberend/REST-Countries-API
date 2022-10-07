@@ -1,12 +1,13 @@
 import React from 'react'
 import {useParams, useNavigate} from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 
 import Error from "./Error.js";
 import "./SingleCountryPage.css";
 import ArrowLeft from "../Assets/arrow-narrow-left.svg";
 
 
-export default function SingleCountryPage({filtered, data, theme, onBorderNavigationClick}) {
+export default function SingleCountryPage({filtered, data, theme, onBorderNavigationClick, loading}) {
   const navigate = useNavigate();
   const {id} = useParams();
   
@@ -97,14 +98,14 @@ export default function SingleCountryPage({filtered, data, theme, onBorderNaviga
               </span>
             </span>
           </div>
+       
         </div>
-
-        <div className="single__page__border__countries">
-          <h4>Border Countries:</h4>
-          <div className="single__page__border__button__container">
-              {borderCountries}
-          </div>
-        </div>
+          <div className="single__page__border__countries">
+            <h4>Border Countries:</h4>
+            <div className="single__page__border__button__container">
+                {borderCountries}
+            </div>
+          </div>  
 
       </div>
     ));
@@ -130,9 +131,12 @@ export default function SingleCountryPage({filtered, data, theme, onBorderNaviga
     )
   } else {
     return (
-
-    <Error />
-
+    <>
+      {loading && <div className="single__page__loading__spinner">
+        <ClipLoader loading={loading} color="var(--light-mode-input)" speedMultiplier="1" size="25px" />
+      </div>}
+      {!loading && <Error />}
+    </>
     )
   }
 }

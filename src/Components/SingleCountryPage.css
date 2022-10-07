@@ -1,3 +1,4 @@
+
 .single__page__back__button__wrapper {
     width: 100%;
     height: 100%;
@@ -120,10 +121,19 @@
 .single__page__border__countries {
     display: flex;
     flex-direction: column;
+    padding-block-end: 2em;
 }
 
 .single__page__border__countries h4{
     min-width: 140px;
+}
+
+.single__page__loading__spinner {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (min-width: 600px) {

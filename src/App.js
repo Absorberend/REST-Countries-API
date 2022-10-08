@@ -91,7 +91,7 @@ function App() {
                     </section>
                   </>
               )} />
-              <Route path="/location=:id" element={<SingleCountryPage filtered={filtered} data={data} theme={theme} onBorderNavigationClick={handleBorderNavigationClick} loading={loading} />} />
+              <Route path="/location/:id" element={<SingleCountryPage filtered={filtered} data={data} theme={theme} onBorderNavigationClick={handleBorderNavigationClick} loading={loading} />} />
               <Route path='*' element={<Error />} />
             </Routes>
           </HashRouter>

@@ -11,7 +11,7 @@ export default function CountryContainer({filtered, theme}) {
     <div 
       key={country.cca3} 
       className={`country__container country__container__${theme}`}
-      onClick={() => navigate(`/location=${country.cca3}`)}
+      onClick={() => navigate(`/location/${country.cca3}`)}
       >
         <img 
           src={country.flags.png} 

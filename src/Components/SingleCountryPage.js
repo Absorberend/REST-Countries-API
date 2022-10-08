@@ -22,7 +22,7 @@ export default function SingleCountryPage({filtered, data, theme, onBorderNaviga
 
   const borderNavigate = (country) => {
     onBorderNavigationClick();
-    navigate(`/location=${country.cca3}`)
+    navigate(`/location/${country.cca3}`)
   }
 
   //bordering countries filter

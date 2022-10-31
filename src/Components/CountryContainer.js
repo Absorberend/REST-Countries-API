@@ -29,8 +29,8 @@ export default function CountryContainer({filtered, theme}) {
             <span className="country__plain__text">{country.region}</span>
           </span>
           <span className="country__text">
-            Capital:
-            <span className="country__plain__text">{country.capital === undefined ? null : country.capital.join(", ")}</span>
+            capitol:
+            <span className="country__plain__text">{country.capitol === undefined ? null : country.capitol.join(", ")}</span>
           </span>
         </div>
     </div>

@@ -74,9 +74,9 @@ export default function SingleCountryPage({filtered, data, theme, onBorderNaviga
                 {country.subregion === undefined ? "" : country.subregion }
               </span>
             </span>
-            <span>Capital:
+            <span>capitol:
               <span className="single__page__main__subtext">
-                {country.capital === undefined ? "" : country.capital.join(", ")}
+                {country.capitol === undefined ? "" : country.capitol.join(", ")}
               </span>
             </span>
           </div>

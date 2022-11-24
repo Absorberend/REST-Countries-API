@@ -34,6 +34,7 @@ function App() {
       }
     })
     .catch(error => console.error(error));    
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -45,6 +46,7 @@ function App() {
 
   useEffect(() => {
     setFiltered(data.filter(country => country.name.common.toLowerCase().includes(search.toLowerCase())));
+    // eslint-disable-next-line
   }, [search])
 
   const handleThemeChangeClick = () => {

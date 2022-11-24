@@ -26,15 +26,31 @@ export default function RegionFilter({theme, onDropDownSelectionPick}) {
           onClick={handleDropDownClick}
           >
             Filter by Region
-            <img src={dropDown? chevronDown : chevronUp} className={`dropdown__chevron dropdown__chevron__${theme}`} alt="dropdown chevron"/>
+            <img 
+              src={dropDown? chevronDown : chevronUp} 
+              className={`dropdown__chevron dropdown__chevron__${theme}`} 
+              alt="dropdown chevron"
+            />
         </button>
-        {dropDown && <ul className={`dropdown__list dropdown__list__${theme}`}>
-          <li><button onClick={onDropDownSelectionPick}>Africa</button></li>
-          <li><button onClick={onDropDownSelectionPick}>Americas</button></li>
-          <li><button onClick={onDropDownSelectionPick}>Asia</button></li>
-          <li><button onClick={onDropDownSelectionPick}>Europe</button></li>
-          <li><button onClick={onDropDownSelectionPick}>Oceania</button></li>
-        </ul>}
+        {dropDown && (
+          <ul className={`dropdown__list dropdown__list__${theme}`}>
+            <li>
+              <button onClick={onDropDownSelectionPick}>Africa</button>
+            </li>
+            <li>
+              <button onClick={onDropDownSelectionPick}>Americas</button>
+            </li>
+            <li>
+              <button onClick={onDropDownSelectionPick}>Asia</button>
+            </li>
+            <li>
+              <button onClick={onDropDownSelectionPick}>Europe</button>
+            </li>
+            <li>
+              <button onClick={onDropDownSelectionPick}>Oceania</button>
+            </li>
+          </ul>
+        )}
       </div>
   )
 }

@@ -41,7 +41,6 @@ export default function SingleCountryPage({filtered, data, theme, onBorderNaviga
       return "";
   });
 
-  
   //map over the filtered country to create and display the single country page
   const singlyCountry = filteredCodes.map(country => (
       <div 
@@ -132,10 +131,19 @@ export default function SingleCountryPage({filtered, data, theme, onBorderNaviga
   } else {
     return (
     <>
-      {loading && <div className="single__page__loading__spinner">
-        <ClipLoader loading={loading} color="var(--light-mode-input)" speedMultiplier="1" size="25px" />
-      </div>}
-      {!loading && <Error />}
+      {loading && (
+        <div className="single__page__loading__spinner">
+          <ClipLoader 
+            loading={loading} 
+            color="var(--light-mode-input)" 
+            speedMultiplier="1" 
+            size="25px" 
+          />
+        </div>
+      )}
+      {!loading && (
+        <Error />
+      )}
     </>
     )
   }

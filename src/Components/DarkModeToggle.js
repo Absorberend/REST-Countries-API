@@ -6,6 +6,7 @@ import moonDark from "../Assets/moon-dark.svg";
 
 
 export default function DarkModeToggle({theme, onThemeChangeClick}) {
+
   return (
     <div className='toggle__container' onClick={onThemeChangeClick}>
       <img 
@@ -17,4 +18,5 @@ export default function DarkModeToggle({theme, onThemeChangeClick}) {
       <button className='theme__btn'>Dark Mode</button>
     </div>
   )
+  
 }

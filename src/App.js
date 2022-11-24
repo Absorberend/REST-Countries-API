@@ -83,15 +83,43 @@ function App() {
               <Route path="/" element={(
                   <>
                     <section className="App__filter__section">
-                      <SearchBar theme={theme} search={search} onSearchInputChange={handleSearchInputChange} />
+                      <SearchBar 
+                        theme={theme} 
+                        search={search} 
+                        onSearchInputChange={handleSearchInputChange} 
+                      />
                       <RegionFilter theme={theme} onDropDownSelectionPick={handleDropDownSelectionClick} />
-                    </section><section className="App__country__container">
-                      <ClipLoader loading={loading} color="var(--light-mode-input)" speedMultiplier="1" size="25px" className="App__loading__spinner" />
-                      {!loading && <CountryContainer data={data} theme={theme} filtered={filtered} />}
+                    </section>
+                    <section className="App__country__container">
+                      <ClipLoader 
+                        loading={loading} 
+                        color="var(--light-mode-input)" 
+                        speedMultiplier="1" 
+                        size="25px" 
+                        className="App__loading__spinner" 
+                      />
+                      {!loading && (
+                        <CountryContainer 
+                          data={data} 
+                          theme={theme} 
+                          filtered={filtered} 
+                        />
+                      )}
                     </section>
                   </>
               )} />
-              <Route path="/location/:id" element={<SingleCountryPage filtered={filtered} data={data} theme={theme} onBorderNavigationClick={handleBorderNavigationClick} loading={loading} />} />
+              <Route 
+                path="/location/:id" 
+                element={(
+                  <SingleCountryPage 
+                    filtered={filtered} 
+                    data={data} 
+                    theme={theme} 
+                    onBorderNavigationClick={handleBorderNavigationClick} 
+                    loading={loading} 
+                  />
+                )} 
+              />
               <Route path='*' element={<Error />} />
             </Routes>
           </HashRouter>

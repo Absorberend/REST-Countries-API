@@ -22,15 +22,21 @@ export default function CountryContainer({filtered, theme}) {
         <h2>{country.name.common}</h2>
           <span className="country__text">
             Population:
-            <span className="country__plain__text">{country.population.toLocaleString('en-US')}</span>
+            <span className="country__plain__text">
+              {country.population.toLocaleString('en-US')}
+            </span>
           </span>
           <span className="country__text">
             Region:
-            <span className="country__plain__text">{country.region}</span>
+            <span className="country__plain__text">
+              {country.region}
+            </span>
           </span>
           <span className="country__text">
             Capitol:
-            <span className="country__plain__text">{country.capital === undefined ? null : country.capital.join(", ")}</span>
+            <span className="country__plain__text">
+              {country.capital === undefined ? null : country.capital.join(", ")}
+            </span>
           </span>
         </div>
     </div>
